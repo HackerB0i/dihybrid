@@ -1,5 +1,5 @@
 """
-Name: Dihybrid Cross program
+Description: Dihybrid Cross-breeding Calculator
 """
 
 parent1geno = input("enter p1: ")
@@ -23,15 +23,33 @@ print(parent2list)
 punnettsquarelist = []
 for x in range(4):
     for y in range(4):
-        genotype = parent1list[x][0] + parent2list[y][0] + parent1list[x][1] + parent2list[y][1]
+        genotype = []
+        genotype.append(parent1list[x][0])
+        genotype.append(parent2list[y][0])
+        genotype.append(parent1list[x][1])
+        genotype.append(parent2list[y][1])
         if (parent1list[x][0].islower() and parent2list[y][0].isupper()):
-            genotype = parent2list[y][0] + parent1list[x][0] + parent1list[y][1] + parent2list[x][1]
+            genotype[0] = parent2list[y][0]
+            genotype[1] = parent1list[x][0]
         if (parent1list[x][1].islower() and parent2list[y][1].isupper()):
-            genotype = parent1list[x][0] + parent2list[y][0] + parent2list[y][1] + parent1list[x][1]
+            genotype[2] = parent2list[y][1]
+            genotype[3] = parent1list[x][1]
         punnettsquarelist.append(genotype)
 
+ratio = [0,0,0,0]
 for i in range(4):
     row = []
     for j in range(4):
         row.append(punnettsquarelist[(i*4)+j])
+        if punnettsquarelist[(i*4)+j][0].isupper() and punnettsquarelist[(i*4)+j][2].isupper():
+            ratio[0] += 1
+        elif punnettsquarelist[(i*4)+j][0].isupper() and punnettsquarelist[(i*4)+j][2].islower():
+            ratio[1] += 1
+        elif punnettsquarelist[(i*4)+j][0].islower() and punnettsquarelist[(i*4)+j][2].isupper():
+            ratio[2] += 1
+        else:
+            ratio[3] += 1
+            
     print(row)
+
+print(ratio)
