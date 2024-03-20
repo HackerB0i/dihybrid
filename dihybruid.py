@@ -40,6 +40,7 @@ for y in range(4):
             genotype[3] = parent1list[x][1]
         punnettsquarelist.append("".join(genotype))
 
+# ratios
 phratio = [0,0,0,0]
 gratio = [0,0,0,0,0,0,0,0,0]
 for i in range(4):
