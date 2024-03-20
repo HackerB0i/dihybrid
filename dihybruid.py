@@ -23,6 +23,7 @@ parent2list.append(parent2geno[0] + parent2geno[3])
 parent2list.append(parent2geno[1] + parent2geno[3])
 print(parent2list)
 
+# the punnet square
 punnettsquarelist = []
 for y in range(4):
     for x in range(4):
