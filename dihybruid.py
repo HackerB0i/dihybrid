@@ -2,9 +2,11 @@
 Description: Dihybrid Cross-breeding Calculator
 """
 
+# input
 parent1geno = input("enter parent 1: ")
 parent2geno = input("enter parent 2: ")
 
+# make the lists
 parent1list = []
 parent2list = []
 
