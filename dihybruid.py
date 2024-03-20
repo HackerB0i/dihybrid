@@ -10,6 +10,7 @@ parent2geno = input("enter parent 2: ")
 parent1list = []
 parent2list = []
 
+# add alleles to a list
 parent1list.append(parent1geno[0] + parent1geno[2])
 parent1list.append(parent1geno[1] + parent1geno[2])
 parent1list.append(parent1geno[0] + parent1geno[3])
